@@ -1,0 +1,6 @@
+framework module YZIPhoneDevice {
+  umbrella header "YZIPhoneDevice.h"
+
+  export *
+  module * { export * }
+}

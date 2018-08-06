@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uOp-Dn-OFk">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meipai View Controller-->
+        <scene sceneID="cmK-fg-3oI">
+            <objects>
+                <viewController id="uOp-Dn-OFk" customClass="MeipaiViewController" customModule="Funny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Kf-YN-k71">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rf9-D6-csU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lf-wg-cQK">
+                                <rect key="frame" x="157" y="657" width="61" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="0jA-T1-V9h"/>
+                                    <constraint firstAttribute="width" constant="61" id="Xp4-aE-qnO"/>
+                                </constraints>
+                                <state key="normal" image="mp_takePhoto"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="uOp-Dn-OFk" eventType="touchUpInside" id="5eb-lD-6gQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-RD-XRd">
+                                <rect key="frame" x="325" y="728" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9rT-tW-62W"/>
+                                    <constraint firstAttribute="width" constant="40" id="V5u-Mf-NEt"/>
+                                </constraints>
+                                <state key="normal" image="mp_close"/>
+                                <connections>
+                                    <action selector="close:" destination="uOp-Dn-OFk" eventType="touchUpInside" id="4F7-Es-eKx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWJ-6F-loD">
+                                <rect key="frame" x="325" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="HTq-kd-bsD"/>
+                                    <constraint firstAttribute="height" constant="40" id="day-Io-Lrl"/>
+                                </constraints>
+                                <state key="normal" image="mp_switchCamera"/>
+                                <connections>
+                                    <action selector="switchCamera:" destination="uOp-Dn-OFk" eventType="touchUpInside" id="Gao-ZU-mJY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pX5-7m-cL7" firstAttribute="bottom" secondItem="JJA-RD-XRd" secondAttribute="bottom" constant="10" id="04B-qd-O1Y"/>
+                            <constraint firstItem="pX5-7m-cL7" firstAttribute="trailing" secondItem="QWJ-6F-loD" secondAttribute="trailing" constant="10" id="3q0-9b-8SU"/>
+                            <constraint firstItem="pX5-7m-cL7" firstAttribute="bottom" secondItem="3lf-wg-cQK" secondAttribute="bottom" constant="60" id="M6G-RR-icF"/>
+                            <constraint firstItem="rf9-D6-csU" firstAttribute="leading" secondItem="pX5-7m-cL7" secondAttribute="leading" id="TSt-LG-sGD"/>
+                            <constraint firstAttribute="bottom" secondItem="rf9-D6-csU" secondAttribute="bottom" id="Vm5-x6-Ham"/>
+                            <constraint firstItem="3lf-wg-cQK" firstAttribute="centerX" secondItem="3Kf-YN-k71" secondAttribute="centerX" id="cId-m2-egp"/>
+                            <constraint firstItem="rf9-D6-csU" firstAttribute="top" secondItem="3Kf-YN-k71" secondAttribute="top" id="fgg-Tt-M1x"/>
+                            <constraint firstItem="QWJ-6F-loD" firstAttribute="top" secondItem="pX5-7m-cL7" secondAttribute="top" constant="20" id="jVN-HH-ITO"/>
+                            <constraint firstItem="pX5-7m-cL7" firstAttribute="trailing" secondItem="rf9-D6-csU" secondAttribute="trailing" id="wvB-2S-bJq"/>
+                            <constraint firstItem="pX5-7m-cL7" firstAttribute="trailing" secondItem="JJA-RD-XRd" secondAttribute="trailing" constant="10" id="xs6-4C-7Rv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pX5-7m-cL7"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoView" destination="rf9-D6-csU" id="qH4-VI-xRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qzw-wg-ZVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052" y="813.54679802955673"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mp_close" width="32" height="32"/>
+        <image name="mp_switchCamera" width="29" height="29"/>
+        <image name="mp_takePhoto" width="61" height="61"/>
+    </resources>
+</document>

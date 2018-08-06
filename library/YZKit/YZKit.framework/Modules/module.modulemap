@@ -1,0 +1,11 @@
+framework module YZKit {
+  umbrella header "YZKit.h"
+
+  export *
+  module * { export * }
+}
+
+module YZKit.Swift {
+    header "YZKit-Swift.h"
+    requires objc
+}

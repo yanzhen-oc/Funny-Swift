@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iTW-J1-Zlh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Funny-->
+        <scene sceneID="qhP-SA-FWb">
+            <objects>
+                <collectionViewController id="sA9-rR-okt" customClass="FunnyHomeViewController" customModule="Funny" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="S70-ox-jRs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fcj-ew-HWe">
+                            <size key="itemSize" width="80" height="90"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeAppCell" id="THw-tU-4a2" customClass="HomeAppCell" customModule="Funny" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dk5-n1-7d9">
+                                            <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="H2r-bB-0gl"/>
+                                                <constraint firstAttribute="height" constant="60" id="RdN-xD-YpP"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eML-ex-eFy">
+                                            <rect key="frame" x="0.0" y="70" width="80" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="tCK-sk-Grq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Dk5-n1-7d9" firstAttribute="centerX" secondItem="THw-tU-4a2" secondAttribute="centerX" id="2Ty-oY-rFx"/>
+                                    <constraint firstAttribute="bottom" secondItem="eML-ex-eFy" secondAttribute="bottom" id="Hle-cQ-nSp"/>
+                                    <constraint firstItem="Dk5-n1-7d9" firstAttribute="top" secondItem="THw-tU-4a2" secondAttribute="top" constant="10" id="c7X-4e-1cv"/>
+                                    <constraint firstAttribute="trailing" secondItem="eML-ex-eFy" secondAttribute="trailing" id="hCE-zz-3Sh"/>
+                                    <constraint firstItem="eML-ex-eFy" firstAttribute="leading" secondItem="THw-tU-4a2" secondAttribute="leading" id="zYb-v3-jPx"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="appIcon" destination="Dk5-n1-7d9" id="Gtu-LV-Gsc"/>
+                                    <outlet property="titleLabel" destination="eML-ex-eFy" id="oxR-vb-ft4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="sA9-rR-okt" id="i2e-V3-Tnf"/>
+                            <outlet property="delegate" destination="sA9-rR-okt" id="ce1-Qy-l0K"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Funny" id="Dgl-5c-jMp">
+                        <barButtonItem key="rightBarButtonItem" image="my" id="89S-g3-cGY">
+                            <connections>
+                                <segue destination="vhx-El-vIQ" kind="show" id="PsZ-qJ-ccY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Nlc-hW-VSL" kind="presentation" identifier="LivePlay" id="jfV-CN-UQ4"/>
+                        <segue destination="B8G-UH-VEb" kind="presentation" identifier="VideoPlay" id="XUT-d4-Ev0"/>
+                        <segue destination="ZM9-iT-8o9" kind="presentation" identifier="9158Live" id="cdm-ZV-1rT"/>
+                        <segue destination="h1I-M1-gDk" kind="presentation" identifier="Hotsoon" id="H71-DZ-eaU"/>
+                        <segue destination="PF3-Wc-nR3" kind="presentation" identifier="Gifshow" id="3pL-0l-uN9"/>
+                        <segue destination="lZX-cS-Odi" kind="presentation" identifier="Budejie" id="ljc-GL-3ML"/>
+                        <segue destination="DUD-C9-kSh" kind="presentation" identifier="DrawPicture" id="W3J-GW-INY"/>
+                        <segue destination="0CN-hd-GDZ" kind="presentation" identifier="Note" id="OGe-42-NxN"/>
+                        <segue destination="5XU-dV-kmO" kind="presentation" identifier="QR" id="Omx-27-H9B"/>
+                        <segue destination="PLF-IC-DAZ" kind="presentation" identifier="Meipai" id="hx5-fS-h4x"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDb-eX-1cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="229"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lt3-Mq-kXj">
+            <objects>
+                <navigationController id="iTW-J1-Zlh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ts4-uQ-WdD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.52156862749999999" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sA9-rR-okt" kind="relationship" relationship="rootViewController" id="Hhe-fT-rKL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nb0-BE-IAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="277"/>
+        </scene>
+        <!--Live-->
+        <scene sceneID="ynL-G0-mas">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Live" id="Nlc-hW-VSL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQK-ea-dhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="-216"/>
+        </scene>
+        <!--Video-->
+        <scene sceneID="Hjp-Jl-Pyu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Video" id="B8G-UH-VEb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhE-2i-ejY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="-153"/>
+        </scene>
+        <!--9158-->
+        <scene sceneID="R3I-vs-JEz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="9158" id="ZM9-iT-8o9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UV9-1o-v63" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="-96"/>
+        </scene>
+        <!--Hotsoon-->
+        <scene sceneID="BAu-7w-Ctg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Hotsoon" id="h1I-M1-gDk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34C-Ev-LY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="-82"/>
+        </scene>
+        <!--Gifshow-->
+        <scene sceneID="4Xn-YL-AfK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Gifshow" id="PF3-Wc-nR3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWw-bo-TNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2235" y="-11"/>
+        </scene>
+        <!--Budejie-->
+        <scene sceneID="4gR-uX-xb6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Budejie" id="lZX-cS-Odi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PyK-FF-dCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2378" y="103"/>
+        </scene>
+        <!--DrawPicture-->
+        <scene sceneID="SQz-9E-n8Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DrawPicture" id="DUD-C9-kSh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Joz-Fx-sEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2377" y="184"/>
+        </scene>
+        <!--Note-->
+        <scene sceneID="POp-oF-JCq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Note" id="0CN-hd-GDZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVY-e5-0vY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2414" y="322"/>
+        </scene>
+        <!--QR-->
+        <scene sceneID="wa7-xy-9Fd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QR" id="5XU-dV-kmO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOv-Qy-KqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2466" y="463"/>
+        </scene>
+        <!--Meipai-->
+        <scene sceneID="1ov-em-Hav">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Meipai" id="PLF-IC-DAZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsH-Ce-auj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349" y="536"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="eHL-yk-mis">
+            <objects>
+                <viewControllerPlaceholder storyboardName="About" id="vhx-El-vIQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKx-CE-0iu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="525"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="my" width="22" height="22"/>
+    </resources>
+</document>

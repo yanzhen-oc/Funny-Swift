@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FVideoPlayCell" id="gTV-IL-0wX" customClass="FVideoPlayCell" customModule="Funny" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8EV-AJ-hRc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    </imageView>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sg8-jo-TuW">
+                        <rect key="frame" x="0.0" y="666" width="375" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="OkR-x1-8ng"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </progressView>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X6s-Ud-2Zn">
+                        <rect key="frame" x="0.0" y="666" width="375" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="3ly-dl-wj6"/>
+                        </constraints>
+                        <color key="progressTintColor" red="1" green="0.52156862745098043" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </progressView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8EV-AJ-hRc" secondAttribute="bottom" id="8WO-se-aUm"/>
+                <constraint firstAttribute="bottom" secondItem="Sg8-jo-TuW" secondAttribute="bottom" id="I1z-F7-I3b"/>
+                <constraint firstAttribute="trailing" secondItem="X6s-Ud-2Zn" secondAttribute="trailing" id="LPK-zz-rdu"/>
+                <constraint firstItem="Sg8-jo-TuW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RJR-rh-EfJ"/>
+                <constraint firstAttribute="bottom" secondItem="X6s-Ud-2Zn" secondAttribute="bottom" id="VBf-u5-fKR"/>
+                <constraint firstItem="8EV-AJ-hRc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bBe-BC-dYI"/>
+                <constraint firstAttribute="trailing" secondItem="8EV-AJ-hRc" secondAttribute="trailing" id="bDT-Op-kK1"/>
+                <constraint firstItem="X6s-Ud-2Zn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="p3O-TU-DJo"/>
+                <constraint firstAttribute="trailing" secondItem="Sg8-jo-TuW" secondAttribute="trailing" id="whs-gg-Hat"/>
+                <constraint firstItem="8EV-AJ-hRc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wyu-fD-sJP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="coverImgView" destination="8EV-AJ-hRc" id="etb-h6-kvW"/>
+                <outlet property="currentProgress" destination="X6s-Ud-2Zn" id="lYX-eG-QJV"/>
+                <outlet property="loadProgress" destination="Sg8-jo-TuW" id="X9R-dN-CP6"/>
+            </connections>
+            <point key="canvasLocation" x="-107" y="44"/>
+        </collectionViewCell>
+    </objects>
+</document>
