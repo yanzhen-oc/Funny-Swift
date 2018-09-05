@@ -26,6 +26,7 @@ class FVideoPlayCell: UICollectionViewCell {
     public func configure(_ video: VideoInfo) {
         playEnd()
         videoUrl = video.videoUrl
+        print(video.videoUrl)
         coverImgView.kf.setImage(with: URL(string: video.imgUrl))
     }
     

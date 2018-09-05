@@ -14,7 +14,10 @@ class FVersionInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textView.text = "[1.0.0] 基于Swift4.1\n[1.0.1] AVPlayer.TimeObserver"
+        textView.text = """
+            [1.0.0] 基于Swift4.1
+            [1.0.1] AVPlayer.TimeObserver
+        """
     }
     
     override var previewActionItems: [UIPreviewActionItem] {

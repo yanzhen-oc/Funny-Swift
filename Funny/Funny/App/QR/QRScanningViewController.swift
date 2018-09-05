@@ -92,14 +92,12 @@ private extension QRScanningViewController {
         FunnyHud.hideHud(for: self.view)
         //二维码和其它同时存在崩溃
         if let features = detector?.features(in: ciImage!) {
-            for value in features {
-                if value is CIQRCodeFeature {
-                    let feature = value as! CIQRCodeFeature
-                    scanVC.scanningDone(feature.messageString!)
-                    session?.stopRunning()
-                    dismiss(animated: true, completion: nil)
-                    return
-                }
+            for value in features where value is CIQRCodeFeature {
+                let feature = value as! CIQRCodeFeature
+                scanVC.scanningDone(feature.messageString!)
+                session?.stopRunning()
+                dismiss(animated: true, completion: nil)
+                return
             }
         }
         
