@@ -96,6 +96,7 @@ class FunnyHttpTool: NSObject {
         switch app {
         case .F9158:
             url = "http://live.9158.com/Fans/GetHotLive"
+            //http://live.9158.com/Rank/WeekRank?Random=10
         case .Hotsoon:
             url = "https://hotsoon.snssdk.com/hotsoon/feed/"
         case .Gifshow:

@@ -65,17 +65,15 @@ extension FunnyHud {
     }
     
     class func hideHud(for view: UIView, animated: Bool = false) {
-        for subView in view.subviews {
-            if subView is FunnyHud {
-                if animated {
-                    UIView.animate(withDuration: 1, animations: {
-                        subView.alpha = 0
-                    }, completion: { (finished) in
-                        subView.removeFromSuperview()
-                    })
-                }else{
+        for subView in view.subviews where subView is FunnyHud {
+            if animated {
+                UIView.animate(withDuration: 1, animations: {
+                    subView.alpha = 0
+                }, completion: { (finished) in
                     subView.removeFromSuperview()
-                }
+                })
+            }else{
+                subView.removeFromSuperview()
             }
         }
     }
