@@ -44,6 +44,7 @@ class FunnyHttpTool: NSObject {
         for (key, value) in parameters {
             para[key] = value
         }
+        
         Alamofire.request(baseUrl, method: .get, parameters: para).responseJSON { (response) in
             result?((response.result.value as? [String : Any], response.result.error))
         }
